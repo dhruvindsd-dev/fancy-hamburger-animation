@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Rolex Logan Weaver",
+        "id": "Rolex Logan Weaver",
+        "leftLineFlex": 0.1,
+        "rightLineFlex": 1,
+        "thumbnailPosition": 900,
+        "offset": 250,
+        "src": "/assets/images/logan.jpg"
+    },
+    {
+        "title": "Autavia Luiz Neto",
+        "id": "Autavia Luiz Neto",
+        "leftLineFlex": 3,
+        "rightLineFlex": 1,
+        "thumbnailPosition": 200,
+        "offset": -600,
+        "src": "/assets/images/luiz.jpg"
+    },
+    {
+        "title": "Timothy Rubby",
+        "id": "Timothy Rubby",
+        "leftLineFlex": 1,
+        "rightLineFlex": 3,
+        "thumbnailPosition": 1000,
+        "offset": 200,
+        "src": "/assets/images/timothy.jpg"
+    },
+    {
+        "title": "Duo Michael Surazhsky",
+        "id": "Duo Michael Surazhsky",
+        "leftLineFlex": 1,
+        "rightLineFlex": 0.5,
+        "thumbnailPosition": 200,
+        "offset": -500,
+        "src": "/assets/images/michael.jpg"
+    }
+]
