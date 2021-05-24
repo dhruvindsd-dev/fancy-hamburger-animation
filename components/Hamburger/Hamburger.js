@@ -17,7 +17,10 @@ function Hamburger({ close, setCursorHovered, x, y }) {
 				transition={{ delay: 1 }}>
 				<head className={Styles.header}>
 					<p className="is-size-4">Products</p>
-					<button onClick={close} className="button is-large is-light">
+					<button
+						aria-label="close"
+						onClick={close}
+						className="button is-large is-light">
 						<span
 							className="icon is-medium is-clickable"
 							onMouseEnter={setCursorHovered.bind(this, true)}

@@ -8,7 +8,7 @@ function Nav({ setCursor, openMenu }) {
 			<div className="navbar-brand">
 				<div className="navbar-item">
 					<Link href="/">
-						<button className="button is-large is-light">
+						<button aria-label="main logo" className="button is-large is-light">
 							<span className="is-size-4 has-text-weight-medium">Omega</span>
 						</button>
 					</Link>
@@ -19,7 +19,7 @@ function Nav({ setCursor, openMenu }) {
 					className="navbar-item"
 					onMouseEnter={setCursor.bind(this, true)}
 					onMouseLeave={setCursor.bind(this, false)}>
-					<button className="button is-light is-large">
+					<button aria-label="menu" className="button is-light is-large">
 						<span className="icon is-large" onClick={openMenu}>
 							<HiMenuAlt3 size={35} />
 						</span>
