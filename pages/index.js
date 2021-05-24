@@ -8,6 +8,7 @@ export default function Home() {
 			<Head>
 				<title>Hamburger Animation 🍔</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<meta name="description" content="portfolio project"></meta>
 			</Head>
 			<div className="main-container">
 				<div className="has-text-centered">
