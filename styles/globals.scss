@@ -10,7 +10,6 @@ html {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-
 	.footer {
 		position: absolute;
 		background-color: hsl(0, 0%, 93%);
@@ -18,6 +17,9 @@ html {
 		left: 0;
 		width: 100%;
 		height: 15rem;
+	}
+	@include touch {
+		padding: 0rem 1rem;
 	}
 }
 .cursor {

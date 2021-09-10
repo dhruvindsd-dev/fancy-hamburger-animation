@@ -12,10 +12,10 @@ export default function Home() {
 			</Head>
 			<div className="main-container">
 				<div className="has-text-centered">
-					<p className="is-size-1 has-test-weight-medium is-uppercase">
+					<p className="is-size-1 is-size-3-mobile has-test-weight-semibold is-uppercase">
 						Time With Perfection
 					</p>
-					<p className="is-size-5">
+					<p className="is-size-5 is-size-6-mobile">
 						Click the menu in the top right to get started
 					</p>
 				</div>
@@ -39,8 +39,10 @@ export default function Home() {
 						</a>
 					</div>
 					<p>Created By Dhruvin</p>
-					<p>Contact me </p>
-					<a href="mailto:dhruvinddev@gmail.com">dhruvinddev@gmail.com</a>
+					<p className="is-size-7-mobile">Contact me </p>
+					<a className="is-size-7-mobile" href="mailto:dhruvinddev@gmail.com">
+						dhruvinddev@gmail.com
+					</a>
 				</footer>
 			</div>
 		</>

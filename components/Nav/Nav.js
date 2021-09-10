@@ -13,17 +13,26 @@ function Nav({ setCursor, openMenu }) {
 						</button>
 					</Link>
 				</div>
-			</div>
-			<div className="navbar-end">
-				<div
-					className="navbar-item"
-					onMouseEnter={setCursor.bind(this, true)}
-					onMouseLeave={setCursor.bind(this, false)}>
+				<div className="navbar-burger">
 					<button aria-label="menu" className="button is-light is-large">
 						<span className="icon is-large" onClick={openMenu}>
 							<HiMenuAlt3 size={35} />
 						</span>
 					</button>
+				</div>
+			</div>
+			<div className="navbar-menu">
+				<div className="navbar-end">
+					<div
+						className="navbar-item"
+						onMouseEnter={setCursor.bind(this, true)}
+						onMouseLeave={setCursor.bind(this, false)}>
+						<button aria-label="menu" className="button is-light is-large">
+							<span className="icon is-large" onClick={openMenu}>
+								<HiMenuAlt3 size={35} />
+							</span>
+						</button>
+					</div>
 				</div>
 			</div>
 		</nav>

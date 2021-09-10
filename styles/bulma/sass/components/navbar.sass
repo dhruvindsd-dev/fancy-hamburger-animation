@@ -154,7 +154,8 @@ body
 
 .navbar-burger
   color: $navbar-burger-color
-  +hamburger($navbar-height)
+  display: flex
+  align-items: center
   +ltr-property("margin", auto, false)
 
 .navbar-menu

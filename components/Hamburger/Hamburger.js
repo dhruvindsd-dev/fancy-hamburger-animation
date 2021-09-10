@@ -4,6 +4,7 @@ import Styles from "./index.module.scss";
 import Data from "../../data.json";
 import { GrClose } from "react-icons/gr";
 import Link from "next/link";
+import { useIsMobile } from "../../hooks/js_responsive";
 
 const transition = { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.9] };
 
@@ -150,34 +151,55 @@ const ListItem = ({
 	);
 };
 
+let innerHeight, innerWidth;
+if (typeof window !== "undefined") innerWidth = window.innerWidth;
+if (typeof window !== "undefined") innerHeight = window.innerHeight;
+const get_panel_mobile_variants = (panel_num) => {
+	let direction_motion;
+	if (panel_num === 1) {
+		direction_motion = [innerWidth, 0, 0];
+	} else {
+		direction_motion = [0, 0, innerWidth];
+	}
+	return {
+		initial: {
+			height: "50vh",
+			width: 0,
+			right: panel_num == 2 ? 0 : null,
+		},
+		animate: {
+			width: [0, innerWidth, 0],
+			right: direction_motion,
+		},
+		exit: {
+			width: [0, innerWidth, 0],
+			left: direction_motion,
+		},
+	};
+};
+
+const panels_transition = { duration: 2, times: [0, 0.5, 1] };
+
 const Panels = () => {
-	let innerHeight;
-	if (typeof window !== "undefined") innerHeight = window.innerHeight;
+	const isMobile = useIsMobile();
+	if (isMobile) {
+	} else {
+	}
 	return (
 		<>
 			<motion.div
-				initial={{ height: 0 }}
-				animate={{
-					height: [0, innerHeight, 0],
-					bottom: [null, 0, 0],
-				}}
-				transition={{ duration: 2, times: [0, 0.5, 1] }}
-				exit={{
-					height: [0, innerHeight, 0],
-					top: [null, 0, 0],
-				}}
+				initial="initial"
+				animate="animate"
+				variants={get_panel_mobile_variants(1)}
+				transition={panels_transition}
+				exit="exit"
 				className={Styles.left__panel}></motion.div>
 			<motion.div
-				initial={{ height: 0 }}
-				animate={{
-					height: [0, innerHeight, 0],
-					bottom: [0, 0, innerHeight],
-				}}
-				transition={{ duration: 2, times: [0, 0.5, 1] }}
-				exit={{
-					height: [0, innerHeight, 0],
-					bottom: [null, 0, 0],
-				}}
+				initial="initial"
+				animate="animate"
+				variants={get_panel_mobile_variants(2)}
+				transition={panels_transition}
+				exit="exit"
 				className={Styles.right__panel}></motion.div>
 		</>
 	);

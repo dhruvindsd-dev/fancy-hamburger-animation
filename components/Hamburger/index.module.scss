@@ -1,4 +1,5 @@
 @import "../../styles/bulma/sass/utilities/derived-variables.sass";
+@import "../../styles/bulma/sass/utilities/mixins.sass";
 $backgroundColor: lavender;
 .header {
 	position: absolute;
@@ -11,16 +12,14 @@ $backgroundColor: lavender;
 }
 .right__panel {
 	height: 100vh;
-	width: 50vw;
 	position: absolute;
 	z-index: 500;
-	right: 0;
+	bottom: 0;
 	background-color: $backgroundColor;
 }
 
 .left__panel {
 	height: 100vh;
-	width: 50vw;
 	position: absolute;
 	z-index: 500;
 	background-color: $backgroundColor;
@@ -38,6 +37,9 @@ $backgroundColor: lavender;
 	.container {
 		width: 80%;
 		position: relative;
+		@include touch {
+			width: 100%;
+		}
 	}
 }
 .title {
@@ -53,6 +55,9 @@ $backgroundColor: lavender;
 		overflow: hidden;
 		font-size: 3.5rem;
 		font-weight: 700;
+		@include mobile {
+			font-size: 1.3rem;
+		}
 	}
 }
 .item__container {
@@ -74,6 +79,11 @@ $backgroundColor: lavender;
 	display: flex;
 	align-items: center;
 	position: relative;
+	@include mobile {
+		align-self: center;
+		margin-bottom: 0;
+		flex: 1 !important;
+	}
 	&:after {
 		content: "";
 		position: absolute;
@@ -125,6 +135,9 @@ $backgroundColor: lavender;
 		width: 100%;
 		height: 100%;
 		background-color: $light;
+	}
+	@include mobile {
+		display: none;
 	}
 }
 .hover__floating__img {
